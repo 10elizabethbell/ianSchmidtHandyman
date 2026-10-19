@@ -14,10 +14,25 @@ colors:
   rust-hi: "#9e3615"
   amber: "#e3922c"
   gold: "#f2bf45"
+  on-rust: "#ffffff"
+  error-tint: "#ffcf9a"
+  facebook: "#1877f2"
+  hero-mid: "#1d4433"
+  hero-low: "#2b5a3c"
+  lawn-far: "#4f7f46"
+  lawn-mid: "#3a6a37"
+  lawn-near: "#2e5a2e"
+  mulch: "#4a2c1a"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(2.7rem, 12.4vw, 6rem)"
+    fontWeight: 900
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
+  display-wide:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(4.5rem, 8.6vw, 7.5rem)"
     fontWeight: 900
     lineHeight: 0.92
     letterSpacing: "-0.035em"
@@ -44,15 +59,15 @@ typography:
     lineHeight: 1.55
   label:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "0.95rem"
+    fontSize: "0.82rem"
     fontWeight: 900
     lineHeight: 1
     letterSpacing: "0.06em"
   small:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1.06rem"
+    fontSize: "0.82rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.3
 rounded:
   pill: "999px"
   circle: "50%"
@@ -153,10 +168,13 @@ The palette is the yard at dusk: deep evergreen grounds, warm kraft paper, and f
 ### Primary
 - **Leaf Rust** (rust): the action color. It fills every primary pill button, the hover/active fill of the service-row arrow circle, and the caret on kraft. White text on rust passes AA.
 - **Pressed Rust** (rust-hi): hover state of the filled button only.
+- **On Rust** (on-rust): white label and icon on rust fills (filled buttons, the hovered arrow circle).
 
 ### Secondary
 - **Bulb Gold** (gold): the light accent on dark grounds. Used for the second line of the hero headline ("handled."), the phone icon in the header, step numbers, every gold focus/hover outline on dark sections, and the input caret.
 - **Maple Amber** (amber): text selection highlight. Its wider role is inside the leaf canvas palette.
+- **Error Tint** (error-tint): inline form error sentences on pine. It is a warm peach so it stays readable on dark green.
+- **Facebook Blue** (facebook): the Facebook glyph only, in the photos-section button and the footer link. Never use it as a surface or text color.
 
 ### Neutral
 - **Pine** (pine): header, hero top, estimate section, step-number discs. Also the theme-color.
@@ -168,12 +186,16 @@ The palette is the yard at dusk: deep evergreen grounds, warm kraft paper, and f
 - **Cream** (cream): text on dark grounds, outlined button stroke on dark, checked chip fill.
 - **Sage** (sage): secondary text on dark grounds (header tagline, lights and estimate intros, notes, footer).
 
+### Scene grounds
+- **Hero Dusk** (pine > hero-mid at 62% > hero-low at 100%): the hero's vertical gradient, darkening down toward the lawn.
+- **Lawn Far / Mid / Near** (lawn-far > lawn-mid at 55% > lawn-near): the CSS lawn behind both lawn canvases. It shows before the canvas paints and stays as the fallback. The hero version runs into a **Mulch** (mulch) band 28px tall at the bottom. The footer strip runs lawn-far > lawn-near with no mulch.
+
 Translucent derivatives are written inline as rgba of their parent: bark at .14/.18/.35 for kraft hairlines and the arrow ring; cream at .05/.07/.4/.7 for chip and field fills, their strokes, and the outlined-button stroke on dark.
 
 ### Canvas palettes (in-script, not CSS tokens)
 - **Leaves**: eight gradient pairs (dark, light): `#9b2d16/#cc4c22`, `#c2541e/#e8852d`, `#d6871f/#f1b03a`, `#dea52a/#f4cd5e`, `#7c4320/#a7652e`, `#b03a1c/#df6e2b`, `#8d5823/#c08a3b`, `#a8441c/#d9732e`. Leaf backs mix toward `#ead8ab`. Veins and stems mix toward bark.
-- **Lawn**: base gradient `#5a8a4c` > `#3e6e39` > `#2a552b`, with blade strokes in five rgba greens. Far-edge grass fringe in `#5f9150`, `#4a7d42`, `#78a85e`. The CSS fallback behind the canvas is `#4f7f46` > `#3a6a37` > `#2e5a2e`.
-- **Mulch bed** (hero only): fill `#43281a`, chips in `#6e4329`, `#2f1a0e`, `#85573a`, `#4f2f1c`, `#9a6a45`.
+- **Lawn**: base gradient `#5a8a4c` > `#3e6e39` > `#2a552b`, with blade strokes in five rgba greens. Far-edge grass fringe in `#5f9150`, `#4a7d42`, `#78a85e`. The CSS ground underneath uses the lawn-far, lawn-mid and lawn-near tokens.
+- **Mulch bed** (hero only): painted fill `#43281a` over the mulch token, chips in `#6e4329`, `#2f1a0e`, `#85573a`, `#4f2f1c`, `#9a6a45`.
 - **C9 bulbs**: `#ff4a36` red, `#3ddc6a` green, `#ffb02e` yellow, `#4f8dff` blue, `#ff7a1f` orange, `#fff0c2` warm white. Each bulb has a `#fffbe8` hot core, an additive radial glow, and a `#1f3a2b` socket.
 - **Roofline**: shingles `#3a3833`, `#33312c`, `#2c2a26`, `#403d37`. Fascia gradient `#ece6d6` > `#d3cbb8` > `#8f8a7c`. Wire `#2d4a37`, clips `#d9d3c4`.
 
@@ -189,17 +211,17 @@ Translucent derivatives are written inline as rgba of their parent: bark at .14/
 **Display Font:** system stack (-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif)
 **Body Font:** the same stack
 
-**Character:** This is a deliberate house choice. PRODUCT.md fixes a system font stack because visitors arrive in Facebook's in-app browser on phones. Personality comes from weight (900), uppercase and tight tracking, not from the face.
+**Character:** This is a deliberate house choice. PRODUCT.md fixes a system font stack because visitors arrive in Facebook's in-app browser on phones. Personality comes from weight (900), uppercase and tight tracking, not from the face. Outside the display and headline clamps, text uses only three sizes: 0.82rem (about 13px), 1.06rem (17px, the body size) and 1.34rem (about 21.4px).
 
 ### Hierarchy
-- **Display** (900, clamp(2.7rem, 12.4vw, 6rem), 0.92, -0.035em, uppercase): hero h1 only. Its second line is a block span in gold. From 900px it grows to clamp(4.5rem, 8.6vw, 7.5rem).
+- **Display** (900, clamp(2.7rem, 12.4vw, 6rem), 0.92, -0.035em, uppercase): hero h1 only. Its second line is a block span in gold. From 900px it switches to **Display Wide** (clamp(4.5rem, 8.6vw, 7.5rem)), with the same weight, leading and tracking.
 - **Headline** (900, clamp(2rem, 8.4vw, 3.4rem), 1, -0.02em, uppercase, balanced wrap): every section h2.
-- **Title** (800, 1.34rem): service row labels. Step titles are 900, 1.06rem, uppercase. Wordmark is 900, 1.06rem, uppercase, +0.01em.
+- **Title** (800, 1.34rem): service row labels, step numerals and the footer name. Step titles are 900, 1.06rem, uppercase. Wordmark is 900, 1.06rem, uppercase, +0.01em.
 - **Lead** (400, 1.34rem, max 34-42ch): the paragraph right under each h2. Sage on dark, bark on kraft.
-- **Body** (400, 17px, 1.55): the base. The hero promise is clamp(1.05rem, 4.6vw, 1.25rem) at 1.45, max 34ch.
-- **Label** (900, 0.95rem, +0.06em, uppercase): service group h3 in bark-2 with a 2px bark hairline below. Form legends and labels are 800, 1.06rem, sentence case.
+- **Body** (400, 17px, 1.55): the base. The hero promise uses the 1.34rem lead size at 1.45, max 34ch.
+- **Label** (900, 0.82rem, +0.06em, uppercase): service group h3 in bark-2 with a 2px bark hairline below. Form legends and labels are 800, 1.06rem, sentence case.
 - **Small** (0.82rem): the header subtitle and the list group labels only. Form notes, errors, the canvas hint and the copy-fallback line use the 17px body size.
-- Buttons: 800, 1.06rem, line height 1.1. The phone number uses tabular numerals.
+- Buttons: 800, 1.06rem, line height 1.1. The header phone number is 800, 1.06rem, with tabular numerals. Inputs are 500, 17px.
 
 ### Named Rules
 **The Weight Not Face Rule.** Hierarchy comes from 900 uppercase against 400 sentence-case body. Never add a webfont or a second family.
@@ -209,7 +231,7 @@ Translucent derivatives are written inline as rgba of their parent: bark at .14/
 ## Layout
 
 - **Phone-first.** Base styles target about 360px. One column. The gutter is 16px (`--gut`), centered inside a 1180px max (`--max`).
-- **Breakpoints:** 374px max-width (smaller phone number and logo), 560px (button pairs go inline, the header tagline goes onto one line, the lights string goes from 2 swags to 3), 900px (sections grow from 64px to 104px padding, service groups go 2-up with a 56px gap, steps go 3-up, the hero grows), 1024px (the estimate splits into intro plus form, 1fr / 1.15fr, 72px gap). Canvases switch phone/desktop tunables at 700px canvas width.
+- **Breakpoints:** 374px max-width (leaf mark shrinks to 26px), 560px (button pairs go inline, the header tagline goes onto one line, the lights string goes from 2 swags to 3), 900px (sections grow from 64px to 104px padding, service groups go 2-up with a 56px gap, steps go 3-up, the hero grows), 1024px (the estimate splits into intro plus form, 1fr / 1.15fr, 72px gap). Canvases switch phone/desktop tunables at 700px canvas width.
 - **Hero:** fills the viewport below the header, `calc(100svh - 64px)`, capped at 860px from 900px. Copy sits on top, and the lawn canvas takes the remaining flex space (230-440px tall, at least 300px on desktop).
 - **Rhythm:** sections pad 64px / 104px. h2 to lead is 16-18px. Lead to buttons is 26px. Button stacks use a 12px grid gap. Chips have a 10px gap. Form fields have a 22px gap.
 - **Line length:** reading copy is capped at 34-42ch.
@@ -221,8 +243,6 @@ Surfaces are flat. There are no cards and no layered panels. Depth lives in the 
 ### Shadow Vocabulary
 - **Button lift** (`box-shadow: 0 8px 18px -10px rgba(8,20,14,.55)`): the filled rust button only.
 - **Hint legibility** (`text-shadow: 0 1px 3px rgba(16,38,29,.9), 0 0 10px rgba(16,38,29,.6)`): the "Drag to rake" hint over the lawn. It is there for legibility, not decoration.
-
-`--shadow` is declared on :root but no rule uses it.
 
 ### Named Rules
 **The Canvas Holds The Depth Rule.** Don't add shadows to UI chrome. If something needs to read as dimensional, it belongs to a scene.
@@ -256,7 +276,7 @@ Multi-select checkboxes in the estimate form.
 ### Inputs / Fields
 - **Style:** cream text, .07 cream wash, 1.5px cream stroke at .4, 12px radius, 14px 16px padding, 52px minimum height. The textarea starts at 104px and resizes vertically. Placeholder is sage at .8. The caret is gold.
 - **Hover / focus:** 2px gold outline, offset 2px. The fill does not change.
-- **Error:** an inline sentence below the field (`#ffcf9a`, 700, 1.06rem), written in Ian's voice, plus `aria-invalid`. Focus moves to the first missing field.
+- **Error:** an inline sentence below the field (error-tint, 700, 1.06rem), written in Ian's voice, plus `aria-invalid`. Focus moves to the first missing field.
 
 ### Numbered steps
 Three steps from text to done. Each has a 48px pine disc with a gold 900 numeral (CSS counter), an uppercase 900 title, and a bark-2 one-liner. They stack on phones and go 3-up from 900px.
@@ -294,7 +314,7 @@ UI transitions stay short: .2s on colors, .15s on chips, .12s on press scale, .6
 - **Do** route every call to action through `data-sms` with one number (+17323004510) and a job-specific prefilled body. Every filled button carries the speech-bubble icon.
 - **Do** keep 44px minimum tap targets, and 56px for buttons.
 - **Do** write in Ian's first-person voice ("I", "me", "Text me"), casual and a little urgent.
-- **Do** put the Facebook link in exactly two places: as the outlined button next to "Text me for photos" in the work/photos section, and in the footer nav. Its icon is Facebook blue (`#1877f2`).
+- **Do** put the Facebook link in exactly two places: as the outlined button next to "Text me for photos" in the work/photos section, and in the footer nav. Its icon is Facebook blue (facebook).
 - **Do** add new animated scenes through `Loop.add` with a reduced-motion still frame.
 - **Do** tune canvases through their tunables block.
 
