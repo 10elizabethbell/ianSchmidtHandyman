@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T09:47:17.426870+00:00",
+  "title": "Design System: Ian Schmidt",
+  "extensions": {
+    "colorMeta": {
+      "pine": {
+        "role": "neutral",
+        "displayName": "Pine",
+        "canonical": "oklch(31.8% 0.048 164)",
+        "tonalRamp": [
+          "#010f08",
+          "#092c1f",
+          "#284a3b",
+          "#476a5a",
+          "#688c7b",
+          "#8aaf9d",
+          "#aed3c1",
+          "#def5ea"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night Pine",
+        "canonical": "oklch(27.3% 0.038 166)",
+        "tonalRamp": [
+          "#030e09",
+          "#112b21",
+          "#2e493e",
+          "#4d685c",
+          "#6d8a7d",
+          "#90ada0",
+          "#b3d1c4",
+          "#e1f4eb"
+        ]
+      },
+      "deep": {
+        "role": "neutral",
+        "displayName": "Deep Pine",
+        "canonical": "oklch(24.7% 0.033 165)",
+        "tonalRamp": [
+          "#040e09",
+          "#142a21",
+          "#31483e",
+          "#50685d",
+          "#70897d",
+          "#92aca0",
+          "#b6d0c4",
+          "#e3f3eb"
+        ]
+      },
+      "kraft": {
+        "role": "neutral",
+        "displayName": "Leaf-Bag Kraft",
+        "canonical": "oklch(87.0% 0.057 84)",
+        "tonalRamp": [
+          "#120a00",
+          "#322200",
+          "#503f1b",
+          "#705f3a",
+          "#92805b",
+          "#b6a37c",
+          "#dbc79f",
+          "#f9edd5"
+        ]
+      },
+      "bark": {
+        "role": "neutral",
+        "displayName": "Bark",
+        "canonical": "oklch(24.5% 0.029 59)",
+        "tonalRamp": [
+          "#110905",
+          "#302216",
+          "#4e3e32",
+          "#6e5e51",
+          "#907e71",
+          "#b4a193",
+          "#d8c5b7",
+          "#f8ece3"
+        ]
+      },
+      "bark-2": {
+        "role": "neutral",
+        "displayName": "Worn Bark",
+        "canonical": "oklch(40.4% 0.045 59)",
+        "tonalRamp": [
+          "#130802",
+          "#351f0d",
+          "#543c29",
+          "#755b48",
+          "#977c68",
+          "#bb9f8a",
+          "#e0c3ad",
+          "#fdebdd"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "oklch(94.6% 0.029 85)",
+        "tonalRamp": [
+          "#0e0b04",
+          "#2c2415",
+          "#494131",
+          "#69604f",
+          "#8a816f",
+          "#ada491",
+          "#d2c8b5",
+          "#f4eee2"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Sage",
+        "canonical": "oklch(85.4% 0.033 142)",
+        "tonalRamp": [
+          "#070d06",
+          "#1b291a",
+          "#384736",
+          "#576655",
+          "#778875",
+          "#99ab98",
+          "#bdcfbb",
+          "#e7f2e6"
+        ]
+      },
+      "rust": {
+        "role": "primary",
+        "displayName": "Leaf Rust",
+        "canonical": "oklch(54.1% 0.158 38)",
+        "tonalRamp": [
+          "#270000",
+          "#5b0000",
+          "#810400",
+          "#a73408",
+          "#cf5934",
+          "#f77d58",
+          "#ffa17c",
+          "#ffd9c1"
+        ]
+      },
+      "rust-hi": {
+        "role": "primary",
+        "displayName": "Pressed Rust",
+        "canonical": "oklch(47.9% 0.145 37)",
+        "tonalRamp": [
+          "#250000",
+          "#570000",
+          "#7d1300",
+          "#a23a1a",
+          "#c95e3e",
+          "#f18161",
+          "#ffa584",
+          "#ffdbc6"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Maple Amber",
+        "canonical": "oklch(72.7% 0.146 67)",
+        "tonalRamp": [
+          "#210000",
+          "#4f0100",
+          "#722900",
+          "#964b00",
+          "#bb6d00",
+          "#e1902a",
+          "#ffb556",
+          "#ffe4b0"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Bulb Gold",
+        "canonical": "oklch(82.9% 0.146 85)",
+        "tonalRamp": [
+          "#1b0400",
+          "#431600",
+          "#643600",
+          "#865700",
+          "#aa7900",
+          "#ce9c0a",
+          "#f4c147",
+          "#ffebab"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only; second line in gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Every section h2."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service row labels."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Paragraph under each h2, 34-42ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase service group h3 in bark-2."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Notes, errors, hint, fallback line."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 8px 18px -10px rgba(8,20,14,.55)",
+        "purpose": "Filled rust button only."
+      },
+      {
+        "name": "hint-legibility",
+        "value": "0 1px 3px rgba(16,38,29,.9), 0 0 10px rgba(16,38,29,.6)",
+        "purpose": "text-shadow on the rake hint over the lawn canvas."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-transition",
+        "value": ".2s",
+        "purpose": "Button and arrow-circle color changes."
+      },
+      {
+        "name": "chip-transition",
+        "value": ".15s",
+        "purpose": "Chip check fill."
+      },
+      {
+        "name": "press",
+        "value": "transform .12s, scale(.98)",
+        "purpose": "Button :active."
+      },
+      {
+        "name": "hint-fade",
+        "value": "opacity .6s",
+        "purpose": "Rake hint fades on first touch."
+      },
+      {
+        "name": "shared-loop",
+        "value": "one requestAnimationFrame, dt<=33ms, IntersectionObserver rootMargin 80px",
+        "purpose": "All canvas scenes register with Loop; sleeps when none visible."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "single still frame, redraw on resize only; smooth scroll off",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs-max",
+        "value": "374px"
+      },
+      {
+        "name": "sm",
+        "value": "560px"
+      },
+      {
+        "name": "md",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "canvas-desktop",
+        "value": "700px (canvas width)"
+      }
+    ],
+    "canvasPalettes": {
+      "leaves": [
+        [
+          "#9b2d16",
+          "#cc4c22"
+        ],
+        [
+          "#c2541e",
+          "#e8852d"
+        ],
+        [
+          "#d6871f",
+          "#f1b03a"
+        ],
+        [
+          "#dea52a",
+          "#f4cd5e"
+        ],
+        [
+          "#7c4320",
+          "#a7652e"
+        ],
+        [
+          "#b03a1c",
+          "#df6e2b"
+        ],
+        [
+          "#8d5823",
+          "#c08a3b"
+        ],
+        [
+          "#a8441c",
+          "#d9732e"
+        ]
+      ],
+      "leafBackMix": "#ead8ab",
+      "lawn": [
+        "#5a8a4c",
+        "#3e6e39",
+        "#2a552b"
+      ],
+      "grassFringe": [
+        "#5f9150",
+        "#4a7d42",
+        "#78a85e"
+      ],
+      "lawnCssFallback": [
+        "#4f7f46",
+        "#3a6a37",
+        "#2e5a2e"
+      ],
+      "mulch": [
+        "#43281a",
+        "#6e4329",
+        "#2f1a0e",
+        "#85573a",
+        "#4f2f1c",
+        "#9a6a45"
+      ],
+      "bulbs": [
+        "#ff4a36",
+        "#3ddc6a",
+        "#ffb02e",
+        "#4f8dff",
+        "#ff7a1f",
+        "#fff0c2"
+      ],
+      "bulbCore": "#fffbe8",
+      "socket": "#1f3a2b",
+      "shingles": [
+        "#3a3833",
+        "#33312c",
+        "#2c2a26",
+        "#403d37"
+      ],
+      "fascia": [
+        "#ece6d6",
+        "#d3cbb8",
+        "#8f8a7c"
+      ],
+      "wire": "#2d4a37",
+      "clips": "#d9d3c4"
+    }
+  },
+  "components": [
+    {
+      "name": "Filled Button",
+      "kind": "button",
+      "refersTo": "button-fill",
+      "description": "Primary pill; always opens a text to Ian.",
+      "html": "<div class=\"ds-root ds-dark\"><a class=\"ds-btn ds-btn-fill\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.6 3.8c-.5.4-1.4.1-1.4-.6V5.5Z\" fill=\"currentColor\"/></svg>Text for a free estimate</a></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-dark{background:var(--pine);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 24px;border-radius:999px;font:800 1.06rem/1.1 var(--font);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,border-color .2s,color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.ds-btn-fill{background:var(--rust);color:#fff;border-color:var(--rust);box-shadow:0 8px 18px -10px rgba(8,20,14,.55)}.ds-btn-fill:hover{background:var(--rust-hi);border-color:var(--rust-hi)}"
+    },
+    {
+      "name": "Outlined Button (dark)",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary pill on pine/night grounds.",
+      "html": "<div class=\"ds-root ds-dark\"><a class=\"ds-btn ds-btn-line\" href=\"#\">Pick what you need</a></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-dark{background:var(--pine);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 24px;border-radius:999px;font:800 1.06rem/1.1 var(--font);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,border-color .2s,color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.ds-btn-line{background:transparent;color:var(--cream);border-color:rgba(246,236,216,.7)}.ds-btn-line:hover{border-color:var(--cream);background:rgba(246,236,216,.08)}"
+    },
+    {
+      "name": "Outlined Button (kraft)",
+      "kind": "button",
+      "refersTo": "button-line-on-kraft",
+      "description": "Secondary pill on kraft; rust focus ring.",
+      "html": "<div class=\"ds-root ds-kraft\"><a class=\"ds-btn ds-btn-kl\" href=\"#\">See me on Facebook</a></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-kraft{background:var(--kraft);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 24px;border-radius:999px;font:800 1.06rem/1.1 var(--font);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,border-color .2s,color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.ds-btn-kl{background:transparent;color:var(--bark);border-color:var(--bark)}.ds-btn-kl:hover{background:rgba(43,29,18,.06)}.ds-btn-kl:focus-visible{outline-color:var(--rust)}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Arrow-circle list row; only the arrow responds to hover/focus.",
+      "html": "<div class=\"ds-root ds-kraft\"><a class=\"ds-row\" href=\"#\">Leaf cleanup<span class=\"ds-arrow\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a><a class=\"ds-row\" href=\"#\">Lawn mowing<span class=\"ds-arrow\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-kraft{background:var(--kraft);padding:16px 24px;font-family:var(--font);color:var(--bark)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:8px 0;border-bottom:1px solid rgba(43,29,18,.14);text-decoration:none;color:var(--bark);font-weight:800;font-size:1.34rem}.ds-row:hover,.ds-row:focus-visible{outline:none}.ds-arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:2px solid rgba(43,29,18,.35);color:var(--bark);flex:none;transition:background-color .2s,border-color .2s,color .2s}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow,.ds-row:active .ds-arrow{background:var(--rust);border-color:var(--rust);color:#fff}.ds-row:focus-visible .ds-arrow{outline:3px solid var(--rust);outline-offset:3px}"
+    },
+    {
+      "name": "Job Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Multi-select pill checkbox; cream when checked, gold outline on hover/focus.",
+      "html": "<div class=\"ds-root ds-dark ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Leaf cleanup</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Junk removal &amp; hauling</span></label></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-dark{background:var(--pine);padding:24px;color:var(--cream);font-family:var(--font)}.ds-chips{display:flex;flex-wrap:wrap;gap:10px}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}.ds-chip span{display:flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(246,236,216,.4);background:rgba(246,236,216,.05);font-weight:700;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}.ds-chip span svg{display:none}.ds-chip input:checked+span{background:var(--cream);color:var(--pine);border-color:var(--cream)}.ds-chip input:checked+span svg{display:block}.ds-chip:hover span,.ds-chip input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Translucent cream field on pine; gold outline on hover/focus.",
+      "html": "<div class=\"ds-root ds-dark\"><label class=\"ds-lbl\" for=\"ds-w\">Where's the job?</label><input class=\"ds-input\" id=\"ds-w\" type=\"text\" placeholder=\"Town or street\"></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-dark{background:var(--pine);padding:24px;color:var(--cream);font-family:var(--font)}.ds-lbl{display:block;font-weight:800;font-size:1.06rem;margin-bottom:10px}.ds-input{width:100%;box-sizing:border-box;font:500 17px/1.4 var(--font);color:var(--cream);background:rgba(246,236,216,.07);border:1.5px solid rgba(246,236,216,.4);border-radius:12px;padding:14px 16px;min-height:52px;caret-color:var(--gold)}.ds-input::placeholder{color:rgba(195,213,193,.8)}.ds-input:hover,.ds-input:focus{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Numbered Steps",
+      "kind": "custom",
+      "refersTo": "step-number",
+      "description": "Pine disc with gold numeral, uppercase title, bark-2 line.",
+      "html": "<ol class=\"ds-root ds-steps\"><li><b>Text me</b><span>Tell me what needs doing. A photo helps.</span></li><li><b>Free estimate</b><span>Fair, upfront pricing.</span></li></ol>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-steps{background:var(--kraft);color:var(--bark);font-family:var(--font);list-style:none;margin:0;padding:24px;display:grid;gap:24px;counter-reset:s}.ds-steps li{display:grid;grid-template-columns:48px 1fr;gap:4px 14px;align-items:start}.ds-steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--pine);color:var(--gold);font-weight:900;font-size:1.25rem}.ds-steps b{font-weight:900;text-transform:uppercase;font-size:1.06rem;padding-top:2px}.ds-steps span{color:var(--bark-2)}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Pine bar: wordmark left, phone number top-right only.",
+      "html": "<header class=\"ds-root ds-top\"><span class=\"ds-brand\"><b>Ian Schmidt</b><small>Yard &amp; handyman · Toms River, NJ</small></span><a class=\"ds-tel\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"color:#f2bf45\"><path d=\"M6.6 3.5h2.6l1.4 4.2-1.9 1.3a12 12 0 0 0 6.3 6.3l1.3-1.9 4.2 1.4v2.6a2 2 0 0 1-2.1 2A16.7 16.7 0 0 1 4.6 5.6a2 2 0 0 1 2-2.1Z\" fill=\"currentColor\"/></svg>732-300-4510</a></header>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-top{background:var(--pine);color:var(--cream);font-family:var(--font);display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:6px 16px}.ds-brand b{display:block;font-weight:900;font-size:1.06rem;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}.ds-brand small{display:block;font-size:.82rem;color:var(--sage);margin-top:3px}.ds-tel{display:flex;align-items:center;gap:7px;min-height:44px;font-weight:800;color:var(--cream);text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}.ds-tel:hover{text-decoration:underline}.ds-tel:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}"
+    },
+    {
+      "name": "Section Headline",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Heavy uppercase system h2 with lead paragraph.",
+      "html": "<div class=\"ds-root ds-dark\"><h2 class=\"ds-h2\">Lights up for the holidays</h2><p class=\"ds-lead\">Halloween, Thanksgiving and Christmas lights, for a fair price.</p></div>",
+      "css": ":host,.ds-root{--pine:#183a2c;--night:#132d23;--deep:#10261d;--kraft:#e6d2aa;--bark:#2b1d12;--bark-2:#5b4330;--cream:#f6ecd8;--sage:#c3d5c1;--rust:#b8441e;--rust-hi:#9e3615;--gold:#f2bf45;--font:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-dark{background:var(--night);padding:24px;color:var(--cream);font-family:var(--font)}.ds-h2{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin:0;font-size:clamp(2rem,8.4vw,3.4rem);text-wrap:balance}.ds-lead{margin:16px 0 0;font-size:1.34rem;line-height:1.55;max-width:36ch;color:var(--sage)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Job Itself",
+    "overview": "This is a one-man yard business, and the site shows the work instead of describing it. On the first screen you get a pine-green dusk over a mown lawn buried in maple, oak and elm leaves, and you rake them clear with a finger or the mouse. Further down, C9 bulbs hang on a shingled roofline at night and swing when you pass over them or tap. Between these two scenes, the sections you read sit on leaf-bag kraft paper. The palette comes from the yard: pine and night greens, rust, amber and gold leaves, kraft, bark brown, cream.\n\nType does the heavy lifting. Headings are huge, uppercase and weight 900, set in the system stack, with tight tracking. There are three interaction shapes: round pill buttons, arrow-circle service rows and circular step numbers. There are no cards, no stock photos, no tool icons and no service-card grid. The page is phone-first and dense with intent, built around one action: text Ian.",
+    "keyCharacteristics": [
+      "Two canvas scenes carry the identity: the leaf lawn (hero, plus a smaller strip at the foot of the estimate section) and holiday lights on a roofline.",
+      "Dark-green sections (pine, night, deep) alternate with kraft reading sections.",
+      "Heavy uppercase system type. No webfonts.",
+      "Round geometry everywhere you touch: pills, circles, 12px fields.",
+      "Flat surfaces. Depth comes only from the canvases and one soft button shadow.",
+      "First-person owner voice, and only Ian's own facts."
+    ],
+    "rules": [
+      {
+        "name": "The Rust Means Text Rule",
+        "body": "Rust fills mean \"this opens a text to Ian\". Spend it on the primary pill buttons and the arrow-circle hover, nowhere else.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gold On Dark Rule",
+        "body": "Gold is the focus and highlight color on pine and night grounds. On kraft, focus switches to rust (outlined buttons, arrow rings), because gold disappears on kraft.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ground Alternation Rule",
+        "body": "Sections alternate between dark greens and kraft: pine header and hero, kraft services, night lights, kraft me and photos, pine estimate, deep footer. A new section takes whichever ground continues the alternation.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Not Face Rule",
+        "body": "Hierarchy comes from 900 uppercase against 400 sentence-case body. Never add a webfont or a second family.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Is For Headings Rule",
+        "body": "Uppercase belongs to h1-h3, step titles, the wordmark and the footer name. Body copy, buttons, labels and chips stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Canvas Holds The Depth Rule",
+        "body": "Don't add shadows to UI chrome. If something needs to read as dimensional, it belongs to a scene.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Only The Arrow Moves Rule",
+        "body": "On hover, focus and active, the row itself does not change. No background, no underline, no shadow, no outline. Only the arrow circle fills rust with a white arrow. On focus-visible the arrow also gets a 3px rust ring.",
+        "section": "components"
+      },
+      {
+        "name": "The One Loop Rule",
+        "body": "Every animated scene registers with the shared `Loop` (one requestAnimationFrame, dt clamped to 33ms). Never start a second rAF.",
+        "section": "components"
+      },
+      {
+        "name": "The Off-Screen Sleep Rule",
+        "body": "An IntersectionObserver (80px margin) marks scenes visible. The loop stops when none are visible and wakes on input.",
+        "section": "components"
+      },
+      {
+        "name": "The Still Frame Rule",
+        "body": "Under `prefers-reduced-motion`, each canvas draws one static frame and redraws only on resize. Smooth scroll is off too. Device pixel ratio is capped at 1.5.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** route every call to action through `data-sms` with one number (+17323004510) and a job-specific prefilled body. Every filled button carries the speech-bubble icon.",
+      "**Do** keep 44px minimum tap targets, and 56px for buttons.",
+      "**Do** write in Ian's first-person voice (\"I\", \"me\", \"Text me\"), casual and a little urgent.",
+      "**Do** put the Facebook link in exactly two places: as the outlined button next to \"Text me for photos\" in the work/photos section, and in the footer nav. Its icon is Facebook blue (`#1877f2`).",
+      "**Do** add new animated scenes through `Loop.add` with a reduced-motion still frame.",
+      "**Do** tune canvases through their tunables block."
+    ],
+    "donts": [
+      "**Don't** add a sticky or fixed bottom call bar. The header number and in-flow buttons are the whole contact system.",
+      "**Don't** show the phone number anywhere else on the first screen. On first view it lives top-right in the header only. It appears again only in the footer and in the form's fallback line.",
+      "**Don't** add an email address, a contact form that posts to a server, hours, prices, reviews, a license or insurance claim, a company name, or photos. None of those exist yet. Gaps stay gaps.",
+      "**Don't** add a webfont, a second typeface, or uppercase body copy.",
+      "**Don't** add cards, a service-card grid, stock photography or tool icons. Services are rows, and the scenes are the imagery.",
+      "**Don't** change the service row itself on hover or focus. Only the arrow responds.",
+      "**Don't** use gold for focus on kraft or rust for focus on dark grounds.",
+      "**Don't** add UI shadows beyond the filled-button lift."
+    ]
+  }
+}
