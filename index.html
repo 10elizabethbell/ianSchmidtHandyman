@@ -49,6 +49,7 @@ p{margin:0}
 .btn-line:hover{border-color:var(--cream);background:rgba(246,236,216,.08)}
 .on-kraft .btn-line{color:var(--bark);border-color:var(--bark)}
 .on-kraft .btn-line:hover{background:rgba(43,29,18,.06)}
+.on-kraft .btn:focus-visible{outline-color:var(--rust)}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .btns{display:grid;gap:12px}
 @media (min-width:560px){.btns{grid-template-columns:auto auto;justify-content:start}}
@@ -59,12 +60,15 @@ p{margin:0}
 .brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;min-width:0}
 .brand svg{width:30px;height:30px;flex:none}
 .brand b{display:block;font-weight:900;font-size:1.08rem;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
-.brand small{display:block;font-size:.8rem;color:var(--sage);line-height:1.2;margin-top:2px;white-space:nowrap}
+.brand>span{min-width:0}
+.brand small{display:block;font-size:.82rem;color:var(--sage);line-height:1.25;margin-top:3px}
+.brand .dot{display:none}
+@media (min-width:560px){.brand small br{display:none}.brand .dot{display:inline}.brand small{white-space:nowrap}}
 .tel{display:flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-weight:800;font-size:1rem;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .tel svg{color:var(--gold)}
 .tel:hover{text-decoration:underline}
 .tel:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
-@media (max-width:374px){.brand small{font-size:.74rem}.tel{font-size:.95rem}.brand svg{width:26px;height:26px}}
+@media (max-width:374px){.tel{font-size:.95rem}.brand svg{width:26px;height:26px}}
 
 /* ===== Hero ===== */
 .hero{position:relative;background:linear-gradient(180deg,var(--pine) 0%,#1d4433 62%,#2b5a3c 100%);color:var(--cream);display:flex;flex-direction:column;min-height:calc(100svh - 64px)}
@@ -75,11 +79,12 @@ p{margin:0}
 .lawn{position:relative;flex:1 1 auto;min-height:230px;max-height:440px}
 .lawn canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;user-select:none;-webkit-user-select:none;
   background:linear-gradient(180deg,transparent 0 34px,#4f7f46 34px,#3a6a37 55%,#2e5a2e calc(100% - 28px),#4a2c1a calc(100% - 28px))}
-.hint{position:absolute;right:var(--gut);bottom:40px;font-size:.85rem;font-weight:700;color:rgba(246,236,216,.92);background:rgba(16,38,29,.5);padding:6px 12px;border-radius:999px;pointer-events:none;transition:opacity .6s}
+.hint{position:absolute;right:var(--gut);bottom:38px;font-size:.94rem;font-weight:800;color:var(--cream);text-shadow:0 1px 3px rgba(16,38,29,.9),0 0 10px rgba(16,38,29,.6);pointer-events:none;transition:opacity .6s}
 .hint.gone{opacity:0}
 @media (min-width:900px){
   .hero{min-height:min(calc(100svh - 64px),860px)}
   .hero-copy{padding-top:88px}
+  .hero h1{font-size:clamp(4.5rem,8.6vw,7.5rem)}
   .lawn{min-height:300px}
 }
 
@@ -91,7 +96,7 @@ p{margin:0}
 @media (min-width:900px){.groups{grid-template-columns:1fr 1fr;gap:56px}}
 .groups h3{font-size:.95rem;letter-spacing:.06em;color:var(--bark-2);padding-bottom:10px;border-bottom:2px solid rgba(43,29,18,.18)}
 .rows{list-style:none;margin:0;padding:0}
-.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:8px 0;border-bottom:1px solid rgba(43,29,18,.14);text-decoration:none;font-weight:800;font-size:1.12rem;-webkit-tap-highlight-color:transparent}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:8px 0;border-bottom:1px solid rgba(43,29,18,.14);text-decoration:none;font-weight:800;font-size:1.18rem;-webkit-tap-highlight-color:transparent}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
 .arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:2px solid rgba(43,29,18,.35);color:var(--bark);flex:none;transition:background-color .2s,border-color .2s,color .2s}
 .row:hover .arrow,.row:focus-visible .arrow{background:var(--rust);border-color:var(--rust);color:#fff}
@@ -100,35 +105,34 @@ p{margin:0}
 
 /* ===== Lights ===== */
 .lights{background:var(--night);color:var(--cream);padding-bottom:64px}
-.string{position:relative;height:150px}
+.string{position:relative;height:176px}
 .string canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
 .lights .wrap{padding-top:18px}
-.lights p{margin:16px 0 26px;font-size:1.12rem;max-width:36ch;color:var(--sage)}
-@media (min-width:900px){.string{height:190px}.lights{padding-bottom:104px}}
+.lights p{margin:16px 0 26px;font-size:1.18rem;max-width:36ch;color:var(--sage)}
+@media (min-width:900px){.string{height:200px}.lights{padding-bottom:104px}}
 
 /* ===== Me + steps ===== */
-.me p.lead{margin:18px 0 0;font-size:1.15rem;max-width:42ch}
+.me p.lead{margin:18px 0 0;font-size:1.18rem;max-width:42ch}
 .steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:24px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:48px 1fr;gap:4px 14px;align-items:start}
 .steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--pine);color:var(--gold);font-weight:900;font-size:1.25rem}
-.steps b{font-weight:900;text-transform:uppercase;font-size:1.05rem;padding-top:2px}
+.steps b{font-weight:900;text-transform:uppercase;font-size:1.06rem;padding-top:2px}
 .steps span{color:var(--bark-2)}
 @media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
 
 /* ===== Photos ===== */
-.photos{background:var(--kraft-2)}
-.photos p{margin:16px 0 26px;font-size:1.12rem;max-width:40ch}
+.photos{padding-top:0}
+.photos p{margin:16px 0 26px;font-size:1.18rem;max-width:40ch}
 .fb svg{color:#1877f2}
-.on-kraft .btn-line.fb{border-color:var(--bark)}
 
 /* ===== Estimate ===== */
 .estimate{background:var(--pine);color:var(--cream);padding-bottom:0}
 .est-grid{display:grid;gap:32px}
 @media (min-width:1024px){.est-grid{grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}}
-.estimate .intro p{margin-top:16px;font-size:1.12rem;color:var(--sage);max-width:36ch}
+.estimate .intro p{margin-top:16px;font-size:1.18rem;color:var(--sage);max-width:36ch}
 form{display:grid;gap:22px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
-legend,.lbl{display:block;font-weight:800;font-size:1.02rem;margin-bottom:10px;padding:0}
+legend,.lbl{display:block;font-weight:800;font-size:1.06rem;margin-bottom:10px;padding:0}
 .opt{font-weight:500;color:var(--sage)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{position:relative}
@@ -144,16 +148,16 @@ input::placeholder,textarea::placeholder{color:rgba(195,213,193,.8)}
 input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:2px}
 .send{width:100%;font-size:1.08rem}
 .send:hover{outline:2px solid var(--gold);outline-offset:3px}
-.note{font-size:.92rem;color:var(--sage);margin-top:-10px}
-.err{color:#ffcf9a;font-weight:700;font-size:.95rem;margin-top:8px;display:none}
+.note{font-size:.94rem;color:var(--sage);margin-top:-10px}
+.err{color:#ffcf9a;font-weight:700;font-size:.94rem;margin-top:8px;display:none}
 .err.on{display:block}
 .sent{display:none;border:1.5px solid rgba(246,236,216,.3);border-radius:16px;padding:18px;background:rgba(16,38,29,.45)}
 .sent.on{display:block}
 .sent pre{white-space:pre-wrap;font:500 1rem/1.5 var(--font);margin:10px 0 14px;user-select:text;-webkit-user-select:text}
 .sent .row2{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.sent .copy{min-height:48px;padding:0 18px;font-size:.95rem}
+.sent .copy{min-height:48px;padding:0 18px;font-size:.94rem}
 .sent .copy:hover{outline:2px solid var(--gold);outline-offset:2px}
-.sent small{font-size:.95rem;color:var(--sage)}
+.sent small{font-size:.94rem;color:var(--sage)}
 .sent small a{color:var(--cream);font-weight:800}
 .lawn-strip{position:relative;height:150px;margin-top:64px}
 .lawn-strip canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;
@@ -176,7 +180,7 @@ THESIS: A one-man yard business shown as the job itself: a lawn buried in fall l
 OWN-WORLD: Pine-green dusk ground, a mown lawn with a mulch-bed edge, maple/oak/elm leaves in rust, amber and gold; leaf-bag kraft paper for reading sections; C9 bulbs glowing on a night-green roofline. Heavy uppercase system type, round pill buttons, arrow-circle rows.
 STORY: This is Ian, he does yard work, hauling and small repairs around Toms River; he answers his own texts and prices fairly up front; text him, or pick the jobs and send a ready-written text.
 FIRST VIEWPORT: Header (wordmark left, 732-300-4510 top right). "Consider it handled." huge, promise line, Text for a free estimate (filled) + Pick what you need (outlined). Lower 40%: the leaf lawn, touchable.
-FORM: Code-led, unattended (no decision page); world 1 of 6.
+FORM: Code-led, unattended: concept roll and decision page not run (no seed key); world 1 of 6 from my own list (runner-up: lights-on-roofline hero).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -192,7 +196,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Ian Schmidt, home">
       <svg aria-hidden="true"><use href="#i-leaf"/></svg>
-      <span><b>Ian Schmidt</b><small>Yard work &amp; handyman · Toms River</small></span>
+      <span><b>Ian Schmidt</b><small>Yard &amp; handyman<span class="dot"> ·</span><br> Toms River, NJ</small></span>
     </a>
     <a class="tel" href="tel:+17323004510"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>732-300-4510</a>
   </div>
@@ -244,7 +248,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="string"><canvas id="lights" aria-hidden="true"></canvas></div>
     <div class="wrap">
       <h2 id="h-lights">Lights up for the holidays</h2>
-      <p>Christmas, Halloween and Thanksgiving lights, put up for a fair price.</p>
+      <p>Halloween, Thanksgiving and Christmas lights, for a fair price.</p>
       <div class="btns"><a class="btn btn-fill" data-sms="Hi Ian, I'm interested in holiday lights. Which holiday:  My town/street:" href="sms:+17323004510"><svg class="ico" aria-hidden="true"><use href="#i-text"/></svg>Text me about lights</a></div>
     </div>
   </section>
@@ -252,11 +256,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="sec me on-kraft" aria-labelledby="h-me">
     <div class="wrap">
       <h2 id="h-me">You deal with me</h2>
-      <p class="lead">When you text this number, you get Ian. I'm the one who shows up, does the job, and tells you the price before I start. I treat your yard and your house the way I'd want someone to treat mine.</p>
+      <p class="lead">Text me and you get me. I'm the one who shows up and does the job, and I treat your yard and your house the way I'd want someone to treat mine.</p>
       <ol class="steps">
         <li><b>Text me</b><span>Tell me what needs doing. A photo helps.</span></li>
-        <li><b>Free estimate</b><span>Fair, upfront pricing. You know the price before any work starts.</span></li>
-        <li><b>Consider it handled</b><span>I do the work myself, start to finish.</span></li>
+        <li><b>Free estimate</b><span>Fair, upfront pricing.</span></li>
+        <li><b>Consider it handled</b><span>Your yard's back to looking like yours.</span></li>
       </ol>
     </div>
   </section>
@@ -264,7 +268,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="sec photos on-kraft" aria-labelledby="h-photos">
     <div class="wrap">
       <h2 id="h-photos">Want to see my work?</h2>
-      <p>I'll send you before-and-after photos of jobs like yours.</p>
+      <p>I'll text you before-and-after photos of my work.</p>
       <div class="btns">
         <a class="btn btn-fill" data-sms="Hi Ian, could you send me some before-and-after photos of your work?" href="sms:+17323004510"><svg class="ico" aria-hidden="true"><use href="#i-text"/></svg>Text me for photos</a>
         <a class="btn btn-line fb" href="https://facebook.com/profile.php?id=100015585766678" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg>See me on Facebook</a>
@@ -279,14 +283,24 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <p>Don't wait until the leaves bury your lawn. I work in Toms River and the surrounding areas.</p>
       </div>
       <form id="est" novalidate>
-        <fieldset>
+        <fieldset aria-describedby="err-what">
           <legend>What do you need?</legend>
-          <div class="chips" id="chips"></div>
+          <div class="chips" id="chips">
+            <label class="chip"><input type="checkbox" name="job" value="Leaf cleanup"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Leaf cleanup</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Lawn mowing"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Lawn mowing</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Weed &amp; garden cleanup"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Weed &amp; garden cleanup</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Mulch &amp; flower beds"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Mulch &amp; flower beds</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Bush &amp; shrub trimming"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Bush &amp; shrub trimming</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Junk removal &amp; hauling"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Junk removal &amp; hauling</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Furniture assembly"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Furniture assembly</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Small home repairs"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Small home repairs</span></label>
+            <label class="chip"><input type="checkbox" name="job" value="Holiday lights"><span><svg aria-hidden="true"><use href="#i-check"/></svg>Holiday lights</span></label>
+          </div>
           <p class="err" id="err-what" role="alert">Pick at least one, or tell me in the notes below.</p>
         </fieldset>
         <div>
           <label class="lbl" for="where">Where's the job?</label>
-          <input type="text" id="where" name="where" autocomplete="street-address" placeholder="Town or street">
+          <input type="text" id="where" name="where" autocomplete="street-address" placeholder="Town or street" aria-describedby="err-where">
           <p class="err" id="err-where" role="alert">Tell me the town or street so I know where the job is.</p>
         </div>
         <div>
@@ -304,7 +318,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <pre id="msg"></pre>
           <div class="row2">
             <button class="btn btn-line copy" type="button" id="copy">Copy message</button>
-            <small id="copied">Didn't open? Text it to <a id="sms-num" href="sms:+17323004510">732-300-4510</a></small>
+            <small id="fallback">Didn't open? Text it to <a id="sms-num" href="sms:+17323004510">732-300-4510</a></small>
           </div>
         </div>
       </form>
@@ -355,8 +369,8 @@ function rnd(a,b){return a+Math.random()*(b-a)}
 /* ===== Leaves on a lawn (hero + footer strip) ===== */
 (function(){
   /* Tunables */
-  var DENSITY=.0034;          // leaves per px² of lawn
-  var MAX_LEAVES=[330,820];   // phone, desktop
+  var DENSITY=.0052;          // leaves per px² of lawn
+  var MAX_LEAVES=[520,1000];   // phone, desktop
   var LEAF_PX=[22,38];        // leaf size range (near ground), px
   var RAKE_R=[58,84];         // finger/mouse reach, phone, desktop
   var GROUND_FRICTION=4.2;    // higher = leaves stop sooner
@@ -428,7 +442,10 @@ function rnd(a,b){return a+Math.random()*(b-a)}
       for(var i=0;i<W*H/9000+8;i++){var cx=rnd(0,W),cy=rnd(SKY,H),r=rnd(30,120),lt=Math.random()<.5;var rg=g.createRadialGradient(cx,cy,0,cx,cy,r);rg.addColorStop(0,lt?'rgba(150,190,110,.10)':'rgba(15,45,18,.07)');rg.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=rg;g.fillRect(cx-r,cy-r,r*2,r*2)}
       var greens=['rgba(96,140,70,.6)','rgba(60,105,52,.6)','rgba(35,78,36,.55)','rgba(125,165,85,.45)','rgba(28,62,30,.5)'];
       var n=Math.min(26000,W*(H-SKY)/14);g.lineCap='round';
-      for(i=0;i<n;i++){var y=rnd(SKY,H),p=persp(y),xx=rnd(0,W),len=(2.5+rnd(0,5))*p,lean=rnd(-1.6,1.6)*p;g.strokeStyle=greens[(Math.random()*greens.length)|0];g.lineWidth=.9*p;g.beginPath();g.moveTo(xx,y);g.lineTo(xx+lean,y-len);g.stroke()}
+      for(var band=0;band<4;band++){var y0=SKY+(H-SKY)*band/4,y1=SKY+(H-SKY)*(band+1)/4;g.lineWidth=.9*persp((y0+y1)/2);
+        for(var gc=0;gc<greens.length;gc++){g.strokeStyle=greens[gc];g.beginPath();
+          for(i=0;i<n/20;i++){var y=rnd(y0,y1),p=persp(y),xx=rnd(0,W),len=(2.5+rnd(0,5))*p,lean=rnd(-1.6,1.6)*p;g.moveTo(xx,y);g.lineTo(xx+lean,y-len)}
+          g.stroke()}}
       g.restore();
       if(mulch){
         var my=function(x){return H-mulch+3*Math.sin(x*.035)+2*Math.sin(x*.11+2)};
@@ -453,7 +470,7 @@ function rnd(a,b){return a+Math.random()*(b-a)}
     function rest(l,x,y){l.gx=x;l.gy=y;l.z=0;l.vz=0;l.vx=l.vy=0;l.vr=0;l.air=false;l.wait=0}
     function seed(){
       var n=Math.round(Math.min(MAX_LEAVES[phone?0:1]*(o.scale||1),W*(gBot()-gTop())*DENSITY));
-      var piles=[];for(var i=0;i<Math.max(3,W/140);i++)piles.push([rnd(0,W),rnd(gTop(),gBot()),rnd(40,110)]);
+      var piles=[];for(var i=0;i<Math.max(3,W/140);i++)piles.push([rnd(0,W),rnd(gTop(),gBot()),rnd(60,140)]);
       for(i=0;i<n;i++){
         var l={s:rnd(LEAF_PX[0],LEAF_PX[1])*(phone?.85:1),sp:pickSprite(),rot:rnd(0,6.28),flat:rnd(.42,.66),side:Math.random()<.72?1:-1};
         if(i<n*.1){fall(l,true)}
@@ -462,8 +479,9 @@ function rnd(a,b){return a+Math.random()*(b-a)}
         leaves.push(l);
       }
     }
+    var rect;
     function size(){
-      var r=cv.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height);
+      var r=rect=cv.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height);
       if(!w||!h||(w===W&&h===H))return false;
       var had=W;W=w;H=h;phone=W<700;cv.width=W*DPR;cv.height=H*DPR;buildTex();buildBlades();
       if(!had)seed();else leaves.forEach(function(l){if(l.gx>W+20||l.gy>gBot())fall(l)});
@@ -488,7 +506,7 @@ function rnd(a,b){return a+Math.random()*(b-a)}
 
     function step(dt,t){
       clock+=dt;size();
-      var r=cv.getBoundingClientRect(),px=P.cx-r.left,py=P.cy-r.top;
+      var r=rect,px=P.cx-r.left,py=P.cy-r.top;
       if(performance.now()-P.t>60){P.vx*=Math.exp(-10*dt);P.vy*=Math.exp(-10*dt)}
       var R=RAKE_R[phone?0:1],raking=P.active&&px>-R&&px<W+R&&py>-R&&py<H+R;
       var sp=Math.hypot(P.vx,P.vy);
@@ -522,7 +540,7 @@ function rnd(a,b){return a+Math.random()*(b-a)}
         if(l.gx<-40||l.gx>W+40){l.wait=rnd(.4,3.5);l.gx=-999}
       }
       for(i=0;i<blades.length;i++){var b=blades[i],bx=b.x-px,by=edge(b.x)-py,bd=Math.hypot(bx,by),tgt=0;if(raking&&bd<R*1.1)tgt=(bx<0?-1:1)*(1-bd/(R*1.1))*9+P.vx*.004;b.b+=(tgt-b.b)*Math.min(1,10*dt)}
-      draw(t,px);
+      draw(t);
     }
     var order=[];
     function draw(t){
@@ -553,6 +571,7 @@ function rnd(a,b){return a+Math.random()*(b-a)}
   }
   buildSprites();
   var hero=document.getElementById('lawn-hero'),foot=document.getElementById('lawn-foot');
+  var hint=document.getElementById('hint');if(hint&&matchMedia('(hover: hover) and (pointer: fine)').matches)hint.textContent='Sweep the mouse across to rake the leaves';
   if(hero)Lawn(hero,{sky:34,mulch:true,gusts:true,hint:document.getElementById('hint')});
   if(foot)Lawn(foot,{sky:30,mulch:false,gusts:true,scale:.55});
 })();
@@ -560,10 +579,11 @@ function rnd(a,b){return a+Math.random()*(b-a)}
 /* ===== Holiday lights on the roofline ===== */
 (function(){
   /* Tunables */
-  var SPACING=[40,48];        // px between bulbs, phone, desktop
+  var SPACING=[46,50];        // px between bulbs, phone, desktop
   var SAG=[34,48];            // swag depth
   var SPRING=26,DAMP=3.2;     // bulb swing
   var PUSH=.0042;             // how hard a passing finger swings bulbs
+  var TAP_R=80;               // tap reach, px
   var COLORS=['#ff4a36','#3ddc6a','#ffb02e','#4f8dff','#ff7a1f','#fff0c2'];
   var cv=document.getElementById('lights');if(!cv)return;
   var ctx=cv.getContext('2d'),W=0,H=0,phone,bulbs=[],swags=1,glows={};
@@ -572,15 +592,28 @@ function rnd(a,b){return a+Math.random()*(b-a)}
   function size(){
     var r=cv.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height);
     if(!w||!h||(w===W&&h===H))return false;W=w;H=h;phone=W<700;cv.width=W*DPR;cv.height=H*DPR;
+    buildRoof();
     swags=W<560?2:W<1100?3:4;bulbs=[];var sp=SPACING[phone?0:1],i=0;
     for(var x=sp*.6;x<W-sp*.3;x+=sp){bulbs.push({x:x,a:0,va:0,c:COLORS[i++%COLORS.length],ph:rnd(0,6.28),flare:0})}
     return true;
   }
+  /* shingle roof edge over a painted fascia board and gutter lip */
+  var ROOF_H=26,roof;
+  function buildRoof(){
+    roof=document.createElement('canvas');roof.width=W*DPR;roof.height=ROOF_H*DPR;var g=roof.getContext('2d');g.scale(DPR,DPR);
+    var sh=['#3a3833','#33312c','#2c2a26','#403d37'];
+    for(var x=-rnd(0,20);x<W;x+=rnd(26,34)){var w=rnd(26,34);g.fillStyle=sh[(Math.random()*sh.length)|0];g.fillRect(x,0,w-1.5,12+rnd(-.6,.6))}
+    g.fillStyle='rgba(0,0,0,.35)';g.fillRect(0,11,W,2);
+    var fg=g.createLinearGradient(0,13,0,ROOF_H);fg.addColorStop(0,'#ece6d6');fg.addColorStop(.75,'#d3cbb8');fg.addColorStop(1,'#8f8a7c');g.fillStyle=fg;g.fillRect(0,13,W,ROOF_H-13);
+  }
   function wireY(x,t){
     var sw=W/swags,k=Math.floor(x/sw),u=(x-k*sw)/sw,s=SAG[phone?0:1]*(1+.06*Math.sin(t*.9+k*1.7));
-    return 24+s*(1-Math.pow(2*u-1,2));
+    return 30+s*(1-Math.pow(2*u-1,2));
   }
   window.addEventListener('pointermove',function(e){var now=performance.now(),dt=Math.max(8,now-P.t)/1000;if(P.t)P.vx+=((e.clientX-P.cx)/dt-P.vx)*.5;P.cx=e.clientX;P.cy=e.clientY;P.t=now},{passive:true});
+  /* a tap swings and brightens the bulbs under the finger */
+  cv.addEventListener('pointerdown',function(e){var r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top,t=performance.now()/1000;
+    bulbs.forEach(function(b){var d=Math.hypot(b.x-px,wireY(b.x,t)+18-py);if(d<TAP_R){var f=1-d/TAP_R;b.va+=(b.x<px?-1:1)*f*3.5+(Math.random()-.5);b.flare=Math.max(b.flare,f)}});Loop.wake()},{passive:true});
   function step(dt,t){
     size();
     var r=cv.getBoundingClientRect(),px=P.cx-r.left,py=P.cy-r.top;
@@ -597,20 +630,20 @@ function rnd(a,b){return a+Math.random()*(b-a)}
   function draw(t){
     ctx.setTransform(DPR,0,0,DPR,0,0);ctx.clearRect(0,0,W,H);
     /* fascia board and gutter the lights clip onto */
-    var fg=ctx.createLinearGradient(0,0,0,22);fg.addColorStop(0,'#e7e1d2');fg.addColorStop(.8,'#cfc7b4');fg.addColorStop(1,'#8f8a7c');
-    ctx.fillStyle=fg;ctx.fillRect(0,0,W,20);
-    var sg=ctx.createLinearGradient(0,20,0,40);sg.addColorStop(0,'rgba(0,0,0,.35)');sg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=sg;ctx.fillRect(0,20,W,20);
+    ctx.drawImage(roof,0,0,W,ROOF_H);
+    var sg=ctx.createLinearGradient(0,ROOF_H,0,ROOF_H+18);sg.addColorStop(0,'rgba(0,0,0,.4)');sg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=sg;ctx.fillRect(0,ROOF_H,W,18);
     /* wire */
     ctx.strokeStyle='#2d4a37';ctx.lineWidth=2.2;ctx.beginPath();
     for(var x=0;x<=W;x+=6){var y=wireY(x,t);x?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.stroke();
-    ctx.fillStyle='#d9d3c4';for(var k=0;k<=swags;k++){ctx.fillRect(k*W/swags-3,18,6,8)}
+    ctx.fillStyle='#d9d3c4';for(var k=0;k<=swags;k++){ctx.fillRect(k*W/swags-3,ROOF_H-4,6,8)}
     /* glow first, additive */
     ctx.globalCompositeOperation='lighter';
-    for(var i=0;i<bulbs.length;i++){var b=bulbs[i],y0=wireY(b.x,t),bx=b.x+Math.sin(b.a)*18,byy=y0+Math.cos(b.a)*18;
+    for(var i=0;i<bulbs.length;i++){var b=bulbs[i],y0=wireY(b.x,t),bx=b.x+Math.sin(b.a)*21,byy=y0+Math.cos(b.a)*21;
       var br=.82+.12*Math.sin(t*2.1+b.ph)+b.flare*.6,rr=(phone?40:52)*br;ctx.globalAlpha=Math.min(1,.75*br);ctx.drawImage(glows[b.c],bx-rr,byy-rr,rr*2,rr*2)}
     ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;
     for(i=0;i<bulbs.length;i++){b=bulbs[i];y0=wireY(b.x,t);
-      ctx.setTransform(DPR*Math.cos(-b.a),DPR*-Math.sin(-b.a),DPR*Math.sin(-b.a),DPR*Math.cos(-b.a),DPR*b.x,DPR*y0);
+      var bs=phone?1.3:1.15,ca=Math.cos(-b.a)*bs*DPR,sa=Math.sin(-b.a)*bs*DPR;
+      ctx.setTransform(ca,-sa,sa,ca,DPR*b.x,DPR*y0);
       ctx.fillStyle='#1f3a2b';ctx.fillRect(-3.5,-1,7,9);
       ctx.beginPath();ctx.moveTo(-4.5,7);ctx.bezierCurveTo(-7.5,12,-4.5,21,0,27);ctx.bezierCurveTo(4.5,21,7.5,12,4.5,7);ctx.closePath();
       var g=ctx.createRadialGradient(-1,15,1,0,15,13);g.addColorStop(0,'#fffbe8');g.addColorStop(.45,b.c);g.addColorStop(1,b.c);ctx.fillStyle=g;ctx.fill();
@@ -623,13 +656,11 @@ function rnd(a,b){return a+Math.random()*(b-a)}
 
 /* ===== Estimate form → pre-written text ===== */
 (function(){
-  var JOBS=['Leaf cleanup','Lawn mowing','Weed & garden cleanup','Mulch & flower beds','Bush & shrub trimming','Junk removal & hauling','Furniture assembly','Small home repairs','Holiday lights'];
   var form=document.getElementById('est');if(!form)return;
   var chips=document.getElementById('chips');
-  chips.innerHTML=JOBS.map(function(j,i){return '<label class="chip"><input type="checkbox" name="job" value="'+j.replace(/&/g,'&amp;')+'" id="job'+i+'"><span><svg aria-hidden="true"><use href="#i-check"/></svg>'+j.replace(/&/g,'&amp;')+'</span></label>'}).join('');
   var where=form.where,notes=form.notes,name=form.name;
   var ew=document.getElementById('err-where'),ej=document.getElementById('err-what');
-  var sent=document.getElementById('sent'),msgEl=document.getElementById('msg'),num=document.getElementById('sms-num'),copied=document.getElementById('copied');
+  var sent=document.getElementById('sent'),msgEl=document.getElementById('msg'),num=document.getElementById('sms-num'),copyBtn=document.getElementById('copy');
   function picked(){return [].slice.call(form.querySelectorAll('input[name=job]:checked')).map(function(i){return i.value})}
   function compose(){
     var jobs=picked(),lines=['Hi Ian, I\'d like a free estimate.'];
@@ -640,11 +671,13 @@ function rnd(a,b){return a+Math.random()*(b-a)}
     return lines.join('\n');
   }
   form.addEventListener('change',function(){if(picked().length)ej.classList.remove('on')});
-  where.addEventListener('input',function(){if(where.value.trim())ew.classList.remove('on')});
+  where.addEventListener('input',function(){if(where.value.trim()){ew.classList.remove('on');where.removeAttribute('aria-invalid')}});
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var okWhat=picked().length||notes.value.trim(),okWhere=where.value.trim();
     ej.classList.toggle('on',!okWhat);ew.classList.toggle('on',!okWhere);
+    if(okWhere)where.removeAttribute('aria-invalid');else where.setAttribute('aria-invalid','true');
+    copyBtn.textContent='Copy message';
     if(!okWhat){chips.querySelector('input').focus();return}
     if(!okWhere){where.focus();return}
     var m=compose(),href=smsHref(m);
@@ -653,8 +686,9 @@ function rnd(a,b){return a+Math.random()*(b-a)}
   });
   document.getElementById('copy').addEventListener('click',function(){
     var m=msgEl.textContent,b=this;
-    function done(){b.textContent='Copied'}
-    function fallback(){var r=document.createRange();r.selectNodeContents(msgEl);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected: copy it'}
+    function reset(){setTimeout(function(){b.textContent='Copy message'},2500)}
+    function done(){b.textContent='Copied';reset()}
+    function fallback(){var r=document.createRange();r.selectNodeContents(msgEl);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected. Tap Copy in the menu.';reset()}
     try{navigator.clipboard.writeText(m).then(done,fallback)}catch(err){fallback()}
   });
 })();

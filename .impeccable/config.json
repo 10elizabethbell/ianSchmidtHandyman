@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-19T09:39:42.507Z",
+        "reason": "Ellie's pitch-site house style (ellie-taste.md §2) mandates the system font stack; Roboto is only its Android fallback"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T09:39:42.577Z",
+        "reason": "pitch-site build: #estimate has padding-bottom 0 by design so the lawn-strip canvas runs flush into the footer"
+      }
+    ]
+  }
+}
